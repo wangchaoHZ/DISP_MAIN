@@ -3,22 +3,118 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF205 ~T0 @X0 0 e ]
 [p i __delay ]
+"1313 D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1313: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"1095
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1095:     struct {
+[s S48 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S48 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"1105
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1105:     struct {
+[s S49 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S49 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
+"1094
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1094: typedef union {
+[u S47 `S48 1 `S49 1 ]
+[n S47 . . . ]
+"1116
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1116: extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
+[v _LATBbits `VS47 ~T0 @X0 0 e@3978 ]
+"1201
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1201: extern volatile unsigned char LATC __attribute__((address(0xF8B)));
+[v _LATC `Vuc ~T0 @X0 0 e@3979 ]
+"1710
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1710:     struct {
+[s S66 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S66 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"1720
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1720:     struct {
+[s S67 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S67 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"1709
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1709: typedef union {
+[u S65 `S66 1 `S67 1 ]
+[n S65 . . . ]
+"1731
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1731: extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
+[v _TRISBbits `VS65 ~T0 @X0 0 e@3987 ]
+"1488
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1488:     struct {
+[s S60 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S60 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"1498
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1498:     struct {
+[s S61 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S61 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"1487
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1487: typedef union {
+[u S59 `S60 1 `S61 1 ]
+[n S59 . . . ]
+"1509
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1509: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
+[v _TRISAbits `VS59 ~T0 @X0 0 e@3986 ]
+"2376
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 2376:     struct {
+[s S84 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S84 . TRISE0 TRISE1 TRISE2 . PSPMODE IBOV OBF IBF ]
+"2386
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 2386:     struct {
+[s S85 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S85 . RE0 RE1 RE2 RE3 ]
+"2375
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 2375: typedef union {
+[u S83 `S84 1 `S85 1 ]
+[n S83 . . . ]
+"2393
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 2393: extern volatile TRISEbits_t TRISEbits __attribute__((address(0xF96)));
+[v _TRISEbits `VS83 ~T0 @X0 0 e@3990 ]
+"983
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 983:     struct {
+[s S45 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S45 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"993
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 993:     struct {
+[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S46 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
+"982
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 982: typedef union {
+[u S44 `S45 1 `S46 1 ]
+[n S44 . . . ]
+"1004
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1004: extern volatile LATAbits_t LATAbits __attribute__((address(0xF89)));
+[v _LATAbits `VS44 ~T0 @X0 0 e@3977 ]
+"1431
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1431:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . LATE0 LATE1 LATE2 ]
+"1436
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1436:     struct {
+[s S58 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S58 . LE0 LE1 LE2 ]
+"1430
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1430: typedef union {
+[u S56 `S57 1 `S58 1 ]
+[n S56 . . . ]
+"1442
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1442: extern volatile LATEbits_t LATEbits __attribute__((address(0xF8D)));
+[v _LATEbits `VS56 ~T0 @X0 0 e@3981 ]
 [p mainexit ]
 "24 ./u_uart.h
 [; ;./u_uart.h: 24: void UART_Init(void);
 [v _UART_Init `(v ~T0 @X0 0 ef ]
-"26
-[; ;./u_uart.h: 26: void UART_SendString(const char* str);
-[v _UART_SendString `(v ~T0 @X0 0 ef1`*Cuc ]
 "22
 [; ;./u_uart.h: 22: extern volatile _Bool uart_frame_ready;
 [v _uart_frame_ready `Va ~T0 @X0 0 e ]
-"25
-[; ;./u_uart.h: 25: void UART_SendChar(char ch);
-[v _UART_SendChar `(v ~T0 @X0 0 ef1`uc ]
-"20
-[; ;./u_uart.h: 20: extern volatile uint8_t uart_rx_buffer[16];
+"39 C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h
+[; ;C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/string.h: 39: int strcmp (const char *, const char *);
+[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"20 ./u_uart.h
+[; ;./u_uart.h: 20: extern volatile uint8_t uart_rx_buffer[10];
 [v _uart_rx_buffer `Vuc ~T0 @X0 -> 0 `x e ]
+"26
+[; ;./u_uart.h: 26: void UART_SendString(const char* str);
+[v _UART_SendString `(v ~T0 @X0 0 ef1`*Cuc ]
 "21
 [; ;./u_uart.h: 21: extern volatile uint8_t uart_rx_index;
 [v _uart_rx_index `Vuc ~T0 @X0 0 e ]
@@ -436,119 +532,418 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7001
 [; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 7001: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"14 main.c
-[; ;main.c: 14: 
+"17 main.c
+[; ;main.c: 17:     _delay((unsigned long)((10)*(10000000/4000000.0)));
 [p x OSC  =  HS      ]
-"15
-[; ;main.c: 15:     while (1)
+"18
+[; ;main.c: 18:     LATBbits.LATB1 = 0;
 [p x FCMEN  =  OFF   ]
-"16
-[; ;main.c: 16:     {
-[p x IESO  =  OFF    ]
 "19
-[; ;main.c: 19:             uart_frame_ready = 0;
+[; ;main.c: 19: }
+[p x IESO  =  OFF    ]
+"22
+[; ;main.c: 22: {
 [p x PWRT  =  OFF    ]
-"20
-[; ;main.c: 20:             UART_SendString("Received: ");
+"23
+[; ;main.c: 23: 
 [p x BOREN  =  OFF   ]
-"21
-[; ;main.c: 21:             for (uint8_t i = 0; i < uart_rx_index; i++)
-[p x BORV  =  3      ]
 "24
-[; ;main.c: 24:             }
+[; ;main.c: 24:     LATC &= 0xF8;
+[p x BORV  =  3      ]
+"27
+[; ;main.c: 27: 
 [p x WDT  =  OFF       ]
-"25
-[; ;main.c: 25:             UART_SendString("\r\n");
-[p x WDTPS  =  32768   ]
 "28
-[; ;main.c: 28:     }
-[p x CCP2MX  =  PORTC   ]
+[; ;main.c: 28: void init_ports(void)
+[p x WDTPS  =  32768   ]
 "31
-[p x LVP  =  OFF     ]
-"32
-[p x DEBUG  =  OFF   ]
+[; ;main.c: 31: 
+[p x CCP2MX  =  PORTC   ]
 "34
-[v _delay_ms `(v ~T0 @X0 1 ef1`ui ]
+[; ;main.c: 34: 
+[p x LVP  =  OFF     ]
 "35
+[; ;main.c: 35: 
+[p x DEBUG  =  OFF   ]
+"37
+[; ;main.c: 37:     TRISAbits.TRISA1 = 0;
+[v _delay_ms `(v ~T0 @X0 1 ef1`ui ]
+"38
+[; ;main.c: 38:     TRISAbits.TRISA2 = 0;
 {
 [e :U _delay_ms ]
-"34
-[v _ms `ui ~T0 @X0 1 r1 ]
-"35
-[f ]
-"36
-[e $U 282  ]
-[e :U 283 ]
 "37
-{
+[; ;main.c: 37:     TRISAbits.TRISA1 = 0;
+[v _ms `ui ~T0 @X0 1 r1 ]
 "38
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
+[; ;main.c: 38:     TRISAbits.TRISA2 = 0;
+[f ]
 "39
-}
-[e :U 282 ]
-"36
-[e $ != -- _ms -> -> 1 `i `ui -> -> 0 `i `ui 283  ]
-[e :U 284 ]
+[; ;main.c: 39:     TRISAbits.TRISA3 = 0;
+[e $U 285  ]
+[e :U 286 ]
 "40
-[e :UE 281 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
+[; ;main.c: 40:     TRISAbits.TRISA5 = 0;
+{
+"41
+[; ;main.c: 41:     TRISEbits.TRISE0 = 0;
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
 "42
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;main.c: 42: 
+}
+[e :U 285 ]
+"39
+[; ;main.c: 39:     TRISAbits.TRISA3 = 0;
+[e $ != -- _ms -> -> 1 `i `ui -> -> 0 `i `ui 286  ]
+[e :U 287 ]
 "43
+[; ;main.c: 43:     LATBbits.LATB1 = 0;
+[e :UE 284 ]
+}
+"45
+[; ;main.c: 45: }
+[v _latch_data `(v ~T0 @X0 1 ef1`uc ]
+"46
+[; ;main.c: 46: 
+{
+[e :U _latch_data ]
+"45
+[; ;main.c: 45: }
+[v _seg_data `uc ~T0 @X0 1 r1 ]
+"46
+[; ;main.c: 46: 
+[f ]
+"48
+[; ;main.c: 48: void SelectIO(uint8_t index)
+[e = _LATD _seg_data ]
+"51
+[; ;main.c: 51:     LATAbits.LATA0 = 0;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+"52
+[; ;main.c: 52:     LATAbits.LATA1 = 0;
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 10000000 `l `d .4000000.0 `ul ]
+"53
+[; ;main.c: 53:     LATAbits.LATA2 = 0;
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+"54
+[; ;main.c: 54:     LATAbits.LATA3 = 0;
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 10000000 `l `d .4000000.0 `ul ]
+"55
+[; ;main.c: 55:     LATAbits.LATA5 = 0;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+"56
+[; ;main.c: 56:     LATEbits.LATE0 = 0;
+[e :UE 288 ]
+}
+"58
+[; ;main.c: 58: 
+[v _select_digit `(v ~T0 @X0 1 ef1`uc ]
+"59
+[; ;main.c: 59:     switch (index)
+{
+[e :U _select_digit ]
+"58
+[; ;main.c: 58: 
+[v _digit_pos `uc ~T0 @X0 1 r1 ]
+"59
+[; ;main.c: 59:     switch (index)
+[f ]
+"61
+[; ;main.c: 61:         case 6:
+[e =& _LATC -> -> 248 `i `Vuc ]
+"62
+[; ;main.c: 62:             LATAbits.LATA0 = 1;
+[e =| _LATC -> & -> _digit_pos `i -> 7 `i `Vuc ]
+"63
+[; ;main.c: 63:             break;
+[e :UE 289 ]
+}
+"65
+[; ;main.c: 65:             LATAbits.LATA1 = 1;
+[v _init_ports `(v ~T0 @X0 1 ef ]
+"66
+[; ;main.c: 66:             break;
+{
+[e :U _init_ports ]
+[f ]
+"69
+[; ;main.c: 69:             break;
+[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
+"73
+[; ;main.c: 73: 
+[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
+"74
+[; ;main.c: 74:         case 2:
+[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
+"75
+[; ;main.c: 75:             LATEbits.LATE0 = 1;
+[e = . . _TRISAbits 0 2 -> -> 0 `i `uc ]
+"76
+[; ;main.c: 76:             break;
+[e = . . _TRISAbits 0 3 -> -> 0 `i `uc ]
+"77
+[; ;main.c: 77: 
+[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
+"78
+[; ;main.c: 78:         case 1:
+[e = . . _TRISEbits 0 0 -> -> 0 `i `uc ]
+"80
+[; ;main.c: 80:             break;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+"82
+[; ;main.c: 82:             break;
+[e :UE 290 ]
+}
+"85
+[; ;main.c: 85: 
+[v _SelectIO `(v ~T0 @X0 1 ef1`uc ]
+"86
+[; ;main.c: 86: char buffer[20];
+{
+[e :U _SelectIO ]
+"85
+[; ;main.c: 85: 
+[v _index `uc ~T0 @X0 1 r1 ]
+"86
+[; ;main.c: 86: char buffer[20];
+[f ]
+"88
+[; ;main.c: 88: void main(void)
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+"89
+[; ;main.c: 89: {
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+"90
+[; ;main.c: 90:     delay_ms(500);
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+"91
+[; ;main.c: 91: 
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+"92
+[; ;main.c: 92:     UART_Init();
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+"93
+[; ;main.c: 93: 
+[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
+"96
+[; ;main.c: 96: 
+[e $U 293  ]
+"97
+[; ;main.c: 97:     SelectIO(0);
+{
+"98
+[; ;main.c: 98:     latch_data(0xFF);
+[e :U 294 ]
+"99
+[; ;main.c: 99: 
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+"100
+[; ;main.c: 100:     while (1)
+[e $U 292  ]
+"101
+[; ;main.c: 101:     {
+[e :U 295 ]
+"102
+[; ;main.c: 102:         if (uart_frame_ready)
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+"103
+[; ;main.c: 103:         {
+[e $U 292  ]
+"104
+[; ;main.c: 104:             uart_frame_ready = 0;
+[e :U 296 ]
+"105
+[; ;main.c: 105: 
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+"106
+[; ;main.c: 106: 
+[e $U 292  ]
+"107
+[; ;main.c: 107:             if (strcmp((char*)uart_rx_buffer, "CONN_REQ\r\n") == 0)
+[e :U 297 ]
+"108
+[; ;main.c: 108:             {
+[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
+"109
+[; ;main.c: 109:                 UART_SendString("CONN_ACK\r\n");
+[e $U 292  ]
+"111
+[; ;main.c: 111:             else if (strcmp((char*)uart_rx_buffer, "SHOW_001\r\n") == 0)
+[e :U 298 ]
+"112
+[; ;main.c: 112:             {
+[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
+"113
+[; ;main.c: 113: 
+[e $U 292  ]
+"115
+[; ;main.c: 115:             }
+[e :U 299 ]
+"116
+[; ;main.c: 116:             else if (strcmp((char*)uart_rx_buffer, "SHOW_002\r\n") == 0)
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+"117
+[; ;main.c: 117:             {
+[e $U 292  ]
+"118
+[; ;main.c: 118: 
+[e :U 300 ]
+"119
+[; ;main.c: 119:                 SelectIO(2);
+[e $U 292  ]
+"120
+[; ;main.c: 120:             }
+}
+[e $U 292  ]
+[e :U 293 ]
+[e [\ _index , $ -> 6 `i 294
+ , $ -> 5 `i 295
+ , $ -> 4 `i 296
+ , $ -> 3 `i 297
+ , $ -> 2 `i 298
+ , $ -> 1 `i 299
+ 300 ]
+[e :U 292 ]
+"121
+[; ;main.c: 121:             else if (strcmp((char*)uart_rx_buffer, "SHOW_003\r\n") == 0)
+[e :UE 291 ]
+}
+"123
+[; ;main.c: 123: 
+[v _buffer `uc ~T0 @X0 -> 20 `i e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"125
+[; ;main.c: 125:             }
+[v _main `(v ~T0 @X0 1 ef ]
+"126
+[; ;main.c: 126:             else if (strcmp((char*)uart_rx_buffer, "SHOW_004\r\n") == 0)
 {
 [e :U _main ]
 [f ]
-"44
-[e ( _delay_ms (1 -> -> 1000 `i `ui ]
-"46
+"127
+[; ;main.c: 127:             {
+[e ( _delay_ms (1 -> -> 500 `i `ui ]
+"129
+[; ;main.c: 129:                 SelectIO(4);
 [e ( _UART_Init ..  ]
-"47
-[e ( _UART_SendString (1 :s 1C ]
-"49
-[e :U 287 ]
-"50
+"132
+[; ;main.c: 132:             {
+[e ( _init_ports ..  ]
+"134
+[; ;main.c: 134:                 SelectIO(5);
+[e ( _SelectIO (1 -> -> 0 `i `uc ]
+"135
+[; ;main.c: 135:             }
+[e ( _latch_data (1 -> -> 255 `i `uc ]
+"137
+[; ;main.c: 137:             {
+[e :U 303 ]
+"138
+[; ;main.c: 138: 
 {
-"51
-[e $ ! != -> _uart_frame_ready `i -> 0 `i 289  ]
-"52
+"139
+[; ;main.c: 139:                 SelectIO(6);
+[e $ ! != -> _uart_frame_ready `i -> 0 `i 305  ]
+"140
+[; ;main.c: 140:             }
 {
-"53
+"141
+[; ;main.c: 141:             uart_rx_index = 0;
 [e = _uart_frame_ready -> -> 0 `i `a ]
-"54
+"144
+[; ;main.c: 144: }
+[e $ ! == ( _strcmp (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 1C -> 0 `i 306  ]
+"145
+{
+"146
 [e ( _UART_SendString (1 :s 2C ]
-"55
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $U 293  ]
-[e :U 290 ]
-"56
-{
-"57
-[e ( _UART_SendChar (1 -> *U + &U _uart_rx_buffer * -> _i `ux -> -> # *U &U _uart_rx_buffer `ui `ux `uc ]
-"58
+"147
 }
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 293 ]
-[e $ < -> _i `i -> _uart_rx_index `i 290  ]
-[e :U 291 ]
+[e $U 307  ]
+"148
+[e :U 306 ]
+[e $ ! == ( _strcmp (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 3C -> 0 `i 308  ]
+"149
+{
+"151
+[e ( _SelectIO (1 -> -> 1 `i `uc ]
+"152
 }
-"59
-[e ( _UART_SendString (1 :s 3C ]
-"60
+[e $U 309  ]
+"153
+[e :U 308 ]
+[e $ ! == ( _strcmp (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 4C -> 0 `i 310  ]
+"154
+{
+"156
+[e ( _SelectIO (1 -> -> 2 `i `uc ]
+"157
+}
+[e $U 311  ]
+"158
+[e :U 310 ]
+[e $ ! == ( _strcmp (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 5C -> 0 `i 312  ]
+"159
+{
+"161
+[e ( _SelectIO (1 -> -> 3 `i `uc ]
+"162
+}
+[e $U 313  ]
+"163
+[e :U 312 ]
+[e $ ! == ( _strcmp (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 6C -> 0 `i 314  ]
+"164
+{
+"166
+[e ( _SelectIO (1 -> -> 4 `i `uc ]
+"167
+}
+[e $U 315  ]
+"168
+[e :U 314 ]
+[e $ ! == ( _strcmp (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 7C -> 0 `i 316  ]
+"169
+{
+"171
+[e ( _SelectIO (1 -> -> 5 `i `uc ]
+"172
+}
+[e $U 317  ]
+"173
+[e :U 316 ]
+[e $ ! == ( _strcmp (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 8C -> 0 `i 318  ]
+"174
+{
+"176
+[e ( _SelectIO (1 -> -> 6 `i `uc ]
+"177
+}
+[e :U 318 ]
+[e :U 317 ]
+[e :U 315 ]
+[e :U 313 ]
+[e :U 311 ]
+[e :U 309 ]
+[e :U 307 ]
+"178
 [e = _uart_rx_index -> -> 0 `i `uc ]
-"61
+"179
 }
-[e :U 289 ]
-"62
+[e :U 305 ]
+"180
 }
-[e :U 286 ]
-[e $U 287  ]
-[e :U 288 ]
-"63
-[e :UE 285 ]
+[e :U 302 ]
+[e $U 303  ]
+[e :U 304 ]
+"181
+[e :UE 301 ]
 }
-[a 2C 82 101 99 101 105 118 101 100 58 32 0 ]
-[a 1C 85 65 82 84 32 73 110 105 116 32 79 75 13 10 0 ]
-[a 3C 13 10 0 ]
+[a 1C 67 79 78 78 95 82 69 81 13 10 0 ]
+[a 2C 67 79 78 78 95 65 67 75 13 10 0 ]
+[a 8C 83 72 79 87 95 48 48 54 13 10 0 ]
+[a 7C 83 72 79 87 95 48 48 53 13 10 0 ]
+[a 6C 83 72 79 87 95 48 48 52 13 10 0 ]
+[a 5C 83 72 79 87 95 48 48 51 13 10 0 ]
+[a 4C 83 72 79 87 95 48 48 50 13 10 0 ]
+[a 3C 83 72 79 87 95 48 48 49 13 10 0 ]

@@ -23,8 +23,14 @@
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strcmp.c
-[v _strcmp strcmp `(i  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strchr.c
+[v _strchr strchr `(*.30uc  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strstr.c
+[v _strstr strstr `(*.30uc  1 e 2 0 ]
 "15 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul64.c
@@ -204,14 +210,41 @@
 "125 D:\CodeSource\DISP_MAIN\DISP_MAIN.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"181
+"191
 } 0
-"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strcmp.c
-[v _strcmp strcmp `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strstr.c
+[v _strstr strstr `(*.30uc  1 e 2 0 ]
 {
-[v strcmp@l l `*.30Cuc  1 p 1 3 ]
-[v strcmp@r r `*.32Cuc  1 p 2 4 ]
 "7
+[v strstr@nl nl `ui  1 a 2 10 ]
+"4
+[v strstr@h h `*.30Cuc  1 p 1 8 ]
+[v strstr@n n `*.31Cuc  1 p 1 9 ]
+"15
+} 0
+"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+{
+[v strncmp@l l `*.30Cuc  1 p 1 3 ]
+[v strncmp@r r `*.31Cuc  1 p 1 4 ]
+[v strncmp@n n `ui  1 p 2 5 ]
+"8
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.31Cuc  1 a 1 5 ]
+"5
+[v strlen@s s `*.31Cuc  1 p 1 3 ]
+"12
+} 0
+"3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strchr.c
+[v _strchr strchr `(*.30uc  1 e 2 0 ]
+{
+[v strchr@s s `*.30Cuc  1 p 1 3 ]
+[v strchr@c c `i  1 p 2 4 ]
+"11
 } 0
 "45 D:\CodeSource\DISP_MAIN\DISP_MAIN.X\main.c
 [v _latch_data latch_data `(v  1 e 1 0 ]
@@ -236,7 +269,7 @@
 "44 D:\CodeSource\DISP_MAIN\DISP_MAIN.X\u_uart.c
 [v _UART_SendString UART_SendString `(v  1 e 1 0 ]
 {
-[v UART_SendString@str str `*.32Cuc  1 p 2 4 ]
+[v UART_SendString@str str `*.31Cuc  1 p 1 4 ]
 "48
 } 0
 "37

@@ -1,4 +1,4 @@
-# 1 "u_uart.c"
+# 1 "main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,8 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "u_uart.c" 2
-# 10 "u_uart.c"
+# 1 "main.c" 2
+# 10 "main.c"
+# 1 "./u_conf.h" 1
+# 11 "main.c" 2
 # 1 "./u_uart.h" 1
 # 13 "./u_uart.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -4649,62 +4651,394 @@ extern volatile _Bool uart_frame_ready;
 void UART_Init(void);
 void UART_SendChar(char ch);
 void UART_SendString(const char* str);
-# 11 "u_uart.c" 2
-# 1 "./u_conf.h" 1
-# 12 "u_uart.c" 2
+# 12 "main.c" 2
+# 1 "./u_cmd.h" 1
+# 13 "main.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef void * va_list[1];
 
-volatile uint8_t uart_rx_buffer[10];
-volatile uint8_t uart_rx_index = 0;
-volatile _Bool uart_frame_ready = 0;
 
-void UART_Init(void)
+
+
+typedef void * __isoc_va_list[1];
+# 143 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __int24 ssize_t;
+# 255 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef long long off_t;
+# 409 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+
+
+
+
+
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 14 "main.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 421 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 2 3
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+
+
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 15 "main.c" 2
+
+
+#pragma config OSC = HS
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config PWRT = OFF
+#pragma config BOREN = OFF
+#pragma config BORV = 3
+
+
+#pragma config WDT = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = PORTC
+
+
+#pragma config LVP = OFF
+#pragma config DEBUG = OFF
+
+void delay_ms(unsigned int ms)
 {
-    TRISC6 = 0;
-    TRISC7 = 1;
-
-    SPBRG = 15;
-    BRGH = 0;
-    BRG16 = 0;
-
-    SYNC = 0;
-    SPEN = 1;
-    TXEN = 1;
-    CREN = 1;
-
-    RCIF = 0;
-    RCIE = 1;
-    PEIE = 1;
-    GIE = 1;
-}
-
-void UART_SendChar(char ch)
-{
-    while (!TXIF)
-        ;
-    TXREG = ch;
-}
-
-void UART_SendString(const char* str)
-{
-    while (*str)
-        UART_SendChar(*str++);
-}
-
-
-void __attribute__((picinterrupt(("")))) ISR(void)
-{
-    if (RCIF)
+    while (ms--)
     {
-        uint8_t received = RCREG;
+        _delay((unsigned long)((1)*(10000000/4000.0)));
+    }
+}
 
-        if (uart_frame_ready == 0)
+void latch_data(uint8_t seg_data)
+{
+
+    LATD = seg_data;
+
+
+    LATBbits.LATB1 = 0;
+    _delay((unsigned long)((10)*(10000000/4000000.0)));
+    LATBbits.LATB1 = 1;
+    _delay((unsigned long)((10)*(10000000/4000000.0)));
+    LATBbits.LATB1 = 0;
+}
+
+void select_digit(uint8_t digit_pos)
+{
+
+    LATC &= 0xF8;
+    LATC |= (digit_pos & 0x07);
+}
+
+void init_ports(void)
+{
+
+
+    TRISBbits.TRISB1 = 0;
+
+
+
+    TRISAbits.TRISA0 = 0;
+    TRISAbits.TRISA1 = 0;
+    TRISAbits.TRISA2 = 0;
+    TRISAbits.TRISA3 = 0;
+    TRISAbits.TRISA5 = 0;
+    TRISEbits.TRISE0 = 0;
+
+    LATBbits.LATB1 = 0;
+
+}
+
+
+void SelectIO(uint8_t index)
+{
+
+    LATAbits.LATA0 = 0;
+    LATAbits.LATA1 = 0;
+    LATAbits.LATA2 = 0;
+    LATAbits.LATA3 = 0;
+    LATAbits.LATA5 = 0;
+    LATEbits.LATE0 = 0;
+
+
+    switch (index)
+    {
+        case 6:
+            LATAbits.LATA0 = 1;
+            break;
+        case 5:
+            LATAbits.LATA1 = 1;
+            break;
+        case 4:
+            LATAbits.LATA2 = 1;
+            break;
+        case 3:
+            LATAbits.LATA3 = 1;
+            break;
+
+        case 2:
+            LATEbits.LATE0 = 1;
+            break;
+
+        case 1:
+            LATAbits.LATA5 = 1;
+            break;
+        default:
+            break;
+    }
+}
+
+char buffer[20];
+
+void main(void)
+{
+    delay_ms(500);
+
+    UART_Init();
+
+
+    init_ports();
+
+    SelectIO(0);
+    latch_data(0xFF);
+
+    while (1)
+    {
+        if (uart_frame_ready)
         {
-            uart_rx_buffer[uart_rx_index++] = received;
-            if (uart_rx_index >= 10)
+            uart_frame_ready = 0;
+
+
+
+
+
+
+
+            if (strstr((char*)uart_rx_buffer, "CONN_REQ"))
             {
-                uart_frame_ready = 1;
-                uart_rx_index = 0;
+                UART_SendString("CONN_ACK\r\n");
             }
+            else if (strstr((char*)uart_rx_buffer, "SHOW_001"))
+            {
+
+                SelectIO(1);
+            }
+            else if (strstr((char*)uart_rx_buffer, "SHOW_002"))
+            {
+
+                SelectIO(2);
+            }
+            else if (strstr((char*)uart_rx_buffer, "SHOW_003"))
+            {
+
+                SelectIO(3);
+            }
+            else if (strstr((char*)uart_rx_buffer, "SHOW_004"))
+            {
+
+                SelectIO(4);
+            }
+            else if (strstr((char*)uart_rx_buffer, "SHOW_005"))
+            {
+
+                SelectIO(5);
+            }
+            else if (strstr((char*)uart_rx_buffer, "SHOW_006"))
+            {
+
+                SelectIO(6);
+            }
+            else if (strstr((char*)uart_rx_buffer, "SHOW_000"))
+            {
+
+                SelectIO(0);
+            }
+            uart_rx_index = 0;
         }
     }
 }

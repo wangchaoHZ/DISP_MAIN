@@ -2,7 +2,7 @@
  * @Author: wangchao
  * @Date: 2025-05-05 12:07:43
  * @LastEditors: wangchao
- * @LastEditTime: 2025-05-05 14:05:43
+ * @LastEditTime: 2025-05-05 19:07:03
  * @FilePath: \DISP_MAIN.X\u_uart.h
  * @Description:
  * Copyright (c) 2025 by Bingshan Guardian, All Rights Reserved.
@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define UART_RX_FRAME_SIZE 16
+#define UART_RX_FRAME_SIZE 10
 
 extern volatile uint8_t uart_rx_buffer[UART_RX_FRAME_SIZE];
 extern volatile uint8_t uart_rx_index;

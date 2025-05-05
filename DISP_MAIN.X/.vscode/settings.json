@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "u_uart.h": "c"
+        "u_uart.h": "c",
+        "u_conf.h": "c"
     }
 }
