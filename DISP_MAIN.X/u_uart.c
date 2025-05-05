@@ -2,13 +2,13 @@
  * @Author: wangchao
  * @Date: 2025-05-05 12:06:41
  * @LastEditors: wangchao
- * @LastEditTime: 2025-05-05 13:59:41
+ * @LastEditTime: 2025-05-05 14:04:18
  * @FilePath: \DISP_MAIN.X\u_uart.c
  * @Description:
  * Copyright (c) 2025 by Bingshan Guardian, All Rights Reserved.
  */
-#include <xc.h>
 #include "u_uart.h"
+#include "u_conf.h"
 
 volatile uint8_t uart_rx_buffer[UART_RX_FRAME_SIZE];
 volatile uint8_t uart_rx_index = 0;

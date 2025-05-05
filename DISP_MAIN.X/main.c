@@ -2,13 +2,12 @@
  * @Author: wangchao
  * @Date: 2025-05-05 12:05:38
  * @LastEditors: wangchao
- * @LastEditTime: 2025-05-05 14:00:08
+ * @LastEditTime: 2025-05-05 14:06:18
  * @FilePath: \DISP_MAIN.X\main.c
  * @Description:
  * Copyright (c) 2025 by Bingshan Guardian, All Rights Reserved.
  */
-#include <xc.h>
-#include <pic18f4520.h>
+#include "u_conf.h"
 #include "u_uart.h"
 
 // CONFIG1H

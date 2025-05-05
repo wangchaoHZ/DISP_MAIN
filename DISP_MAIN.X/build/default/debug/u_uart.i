@@ -7,6 +7,9 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "u_uart.c" 2
+# 10 "u_uart.c"
+# 1 "./u_uart.h" 1
+# 13 "./u_uart.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4631,25 +4634,33 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
-# 2 "u_uart.c" 2
-# 1 "./u_uart.h" 1
+# 14 "./u_uart.h" 2
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
+# 17 "./u_uart.h" 2
+
+
+
+extern volatile uint8_t uart_rx_buffer[16];
+extern volatile uint8_t uart_rx_index;
+extern volatile _Bool uart_frame_ready;
 
 void UART_Init(void);
 void UART_SendChar(char ch);
 void UART_SendString(const char* str);
-char UART_ReadChar(void);
-# 3 "u_uart.c" 2
+# 11 "u_uart.c" 2
+# 1 "./u_conf.h" 1
+# 12 "u_uart.c" 2
 
-
+volatile uint8_t uart_rx_buffer[16];
+volatile uint8_t uart_rx_index = 0;
+volatile _Bool uart_frame_ready = 0;
 
 void UART_Init(void)
 {
-
     TRISC6 = 0;
     TRISC7 = 1;
-
 
     SPBRG = 15;
     BRGH = 0;
@@ -4659,24 +4670,41 @@ void UART_Init(void)
     SPEN = 1;
     TXEN = 1;
     CREN = 1;
+
+    RCIF = 0;
+    RCIE = 1;
+    PEIE = 1;
+    GIE = 1;
 }
 
 void UART_SendChar(char ch)
 {
-    while (!TXIF);
+    while (!TXIF)
+        ;
     TXREG = ch;
 }
 
-void UART_SendString(const char *str)
+void UART_SendString(const char* str)
 {
     while (*str)
-    {
         UART_SendChar(*str++);
-    }
 }
 
-char UART_ReadChar(void)
+
+void __attribute__((picinterrupt(("")))) ISR(void)
 {
-    while (!RCIF);
-    return RCREG;
+    if (RCIF)
+    {
+        uint8_t received = RCREG;
+
+        if (uart_frame_ready == 0)
+        {
+            uart_rx_buffer[uart_rx_index++] = received;
+            if (uart_rx_index >= 16)
+            {
+                uart_frame_ready = 1;
+                uart_rx_index = 0;
+            }
+        }
+    }
 }

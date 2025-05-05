@@ -8,6 +8,10 @@
 # 2 "<built-in>" 2
 # 1 "main.c" 2
 # 10 "main.c"
+# 1 "./u_conf.h" 1
+# 11 "main.c" 2
+# 1 "./u_uart.h" 1
+# 13 "./u_uart.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4632,17 +4636,22 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
-# 11 "main.c" 2
-
-# 1 "./u_uart.h" 1
+# 14 "./u_uart.h" 2
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
+# 17 "./u_uart.h" 2
+
+
+
+extern volatile uint8_t uart_rx_buffer[16];
+extern volatile uint8_t uart_rx_index;
+extern volatile _Bool uart_frame_ready;
 
 void UART_Init(void);
 void UART_SendChar(char ch);
 void UART_SendString(const char* str);
-char UART_ReadChar(void);
-# 13 "main.c" 2
+# 12 "main.c" 2
 
 
 #pragma config OSC = HS
@@ -4665,16 +4674,33 @@ char UART_ReadChar(void);
 #pragma config LVP = OFF
 #pragma config DEBUG = OFF
 
+void delay_ms(unsigned int ms)
+{
+    while (ms--)
+    {
+        _delay((unsigned long)((1)*(10000000/4000.0)));
+    }
+}
+
 void main(void)
 {
-
+    delay_ms(1000);
 
     UART_Init();
     UART_SendString("UART Init OK\r\n");
 
     while (1)
     {
-
-        UART_SendChar('A');
+        if (uart_frame_ready)
+        {
+            uart_frame_ready = 0;
+            UART_SendString("Received: ");
+            for (uint8_t i = 0; i < uart_rx_index; i++)
+            {
+                UART_SendChar(uart_rx_buffer[i]);
+            }
+            UART_SendString("\r\n");
+            uart_rx_index = 0;
+        }
     }
 }
