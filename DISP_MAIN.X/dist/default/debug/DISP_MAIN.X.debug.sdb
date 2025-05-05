@@ -1,0 +1,87 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4520 ]
+[d frameptr 4065 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"35 D:\CodeSource\DISP_MAIN\DISP_MAIN.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"6 D:\CodeSource\DISP_MAIN\DISP_MAIN.X\u_uart.c
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+"23
+[v _UART_SendChar UART_SendChar `(v  1 e 1 0 ]
+"29
+[v _UART_SendString UART_SendString `(v  1 e 1 0 ]
+"3576 D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"3588
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"3600
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"7142
+[v _BRG16 BRG16 `VEb  1 e 0 @32195 ]
+"7145
+[v _BRGH BRGH `VEb  1 e 0 @32098 ]
+"7295
+[v _CREN CREN `VEb  1 e 0 @32092 ]
+"8180
+[v _RCIF RCIF `VEb  1 e 0 @31989 ]
+"8330
+[v _SPEN SPEN `VEb  1 e 0 @32095 ]
+"8393
+[v _SYNC SYNC `VEb  1 e 0 @32100 ]
+"8633
+[v _TRISC6 TRISC6 `VEb  1 e 0 @31910 ]
+"8636
+[v _TRISC7 TRISC7 `VEb  1 e 0 @31911 ]
+"8726
+[v _TXEN TXEN `VEb  1 e 0 @32101 ]
+"8735
+[v _TXIF TXIF `VEb  1 e 0 @31988 ]
+"35 D:\CodeSource\DISP_MAIN\DISP_MAIN.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"47
+} 0
+"29 D:\CodeSource\DISP_MAIN\DISP_MAIN.X\u_uart.c
+[v _UART_SendString UART_SendString `(v  1 e 1 0 ]
+{
+[v UART_SendString@str str `*.31Cuc  1 p 1 1 ]
+"35
+} 0
+"23
+[v _UART_SendChar UART_SendChar `(v  1 e 1 0 ]
+{
+[v UART_SendChar@ch ch `uc  1 p 1 wreg ]
+[v UART_SendChar@ch ch `uc  1 p 1 wreg ]
+[v UART_SendChar@ch ch `uc  1 p 1 0 ]
+"27
+} 0
+"6
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+{
+"21
+} 0
