@@ -5066,6 +5066,11 @@ void main(void)
 
                 LATCbits.LATC5 = 1;
             }
+            else if (strstr((char*)uart_rx_buffer, "SET0_RC5"))
+            {
+
+                LATCbits.LATC5 = 0;
+            }
             else
             {
                 UART_SendString("ERROR:UNKNOWN_CMD:");

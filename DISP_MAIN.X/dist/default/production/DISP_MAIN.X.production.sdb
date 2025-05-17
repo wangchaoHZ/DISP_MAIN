@@ -310,11 +310,11 @@
 "148 D:\CodeSource\DISP_MAIN\DISP_MAIN.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"219
+"224
 [v main@i i `uc  1 a 1 65 ]
 "207
 [v main@rc_input rc_input `uc  1 a 1 64 ]
-"229
+"234
 } 0
 "4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\strstr.c
 [v _strstr strstr `(*.30uc  1 e 2 0 ]
@@ -353,10 +353,10 @@
 "9 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S1012 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[u S1014 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
 "13
-[s S1015 _IO_FILE 11 `S1012 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S1015  1 a 11 53 ]
+[s S1017 _IO_FILE 11 `S1014 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S1017  1 a 11 53 ]
 "12
 [v sprintf@ap ap `[1]*.30v  1 a 1 52 ]
 "9
@@ -369,9 +369,9 @@
 {
 "1820
 [v vfprintf@cfmt cfmt `*.31uc  1 a 1 47 ]
-[s S1047 _IO_FILE 0 ]
+[s S1049 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.30S1047  1 p 1 44 ]
+[v vfprintf@fp fp `*.30S1049  1 p 1 44 ]
 [v vfprintf@fmt fmt `*.31Cuc  1 p 1 45 ]
 [v vfprintf@ap ap `*.30*.30v  1 p 1 46 ]
 "1840
@@ -379,16 +379,16 @@
 "1177
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S1066 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+[u S1068 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
 "1188
-[v vfpfcnvrt@convarg convarg `S1066  1 a 4 38 ]
+[v vfpfcnvrt@convarg convarg `S1068  1 a 4 38 ]
 "1179
 [v vfpfcnvrt@cp cp `*.31uc  1 a 1 43 ]
 "1180
 [v vfpfcnvrt@done done `a  1 a 1 42 ]
-[s S1047 _IO_FILE 0 ]
+[s S1049 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.30S1047  1 p 1 35 ]
+[v vfpfcnvrt@fp fp `*.30S1049  1 p 1 35 ]
 [v vfpfcnvrt@fmt fmt `*.30*.31uc  1 p 1 36 ]
 [v vfpfcnvrt@ap ap `*.30*.30v  1 p 1 37 ]
 "1814
@@ -403,9 +403,9 @@
 [v xtoa@c c `uc  1 a 1 32 ]
 "1067
 [v xtoa@p p `a  1 a 1 29 ]
-[s S1047 _IO_FILE 0 ]
+[s S1049 _IO_FILE 0 ]
 "1055
-[v xtoa@fp fp `*.30S1047  1 p 1 23 ]
+[v xtoa@fp fp `*.30S1049  1 p 1 23 ]
 [v xtoa@d d `ui  1 p 2 24 ]
 "1153
 } 0
@@ -414,9 +414,9 @@
 {
 "195
 [v pad@i i `i  1 a 2 21 ]
-[s S1047 _IO_FILE 0 ]
+[s S1049 _IO_FILE 0 ]
 "193
-[v pad@fp fp `*.30S1047  1 p 1 16 ]
+[v pad@fp fp `*.30S1049  1 p 1 16 ]
 [v pad@buf buf `*.30uc  1 p 1 17 ]
 [v pad@p p `i  1 p 2 18 ]
 "226
@@ -430,18 +430,18 @@
 [v fputs@c c `uc  1 a 1 13 ]
 "8
 [v fputs@s s `*.30Cuc  1 p 1 11 ]
-[u S1012 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
-[s S1015 _IO_FILE 11 `S1012 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.30S1015  1 p 1 12 ]
+[u S1014 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[s S1017 _IO_FILE 11 `S1014 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.30S1017  1 p 1 12 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 3 ]
-[u S1012 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
-[s S1015 _IO_FILE 11 `S1012 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.30S1015  1 p 1 5 ]
+[u S1014 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[s S1017 _IO_FILE 11 `S1014 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.30S1017  1 p 1 5 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\putch.c

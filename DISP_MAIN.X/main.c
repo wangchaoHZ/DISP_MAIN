@@ -2,7 +2,7 @@
  * @Author: wangchao
  * @Date: 2025-05-05 12:05:38
  * @LastEditors: wangchao
- * @LastEditTime: 2025-05-17 20:23:47
+ * @LastEditTime: 2025-05-17 20:38:21
  * @FilePath: \DISP_MAIN.X\main.c
  * @Description:
  * Copyright (c) 2025 by Bingshan Guardian, All Rights Reserved.
@@ -208,10 +208,15 @@ void main(void)
                 sprintf(buffer, "RC:%02X\r\n", rc_input);
                 UART_SendString(buffer);  // 发送 RC 输入状态
             }
-            else if (strstr((char*)uart_rx_buffer, APP_TEST_SET_RC5))
+            else if (strstr((char*)uart_rx_buffer, APP_TEST_SET1_RC5))
             {
                 // UART_SendString("SET1_RC5\r\n");
                 LATCbits.LATC5 = 1;  // 设置 RC5 为高电平
+            }
+            else if (strstr((char*)uart_rx_buffer, APP_TEST_SET0_RC5))
+            {
+                // UART_SendString("SET0_RC5\r\n");
+                LATCbits.LATC5 = 0;  // 设置 RC5 为低电平
             }
             else
             {
