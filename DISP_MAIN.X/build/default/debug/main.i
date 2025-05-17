@@ -4908,11 +4908,29 @@ void latch_data(uint8_t seg_data)
     LATBbits.LATB1 = 0;
 }
 
-void select_digit(uint8_t digit_pos)
+void init_inputs_RC0_to_RC5(void)
 {
+    TRISCbits.TRISC0 = 1;
+    TRISCbits.TRISC1 = 1;
+    TRISCbits.TRISC2 = 1;
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 1;
+    TRISCbits.TRISC5 = 1;
+}
 
-    LATC &= 0xF8;
-    LATC |= (digit_pos & 0x07);
+uint8_t read_RC_inputs(void)
+{
+    uint8_t result = 0;
+
+    result |= (PORTCbits.RC0 << 0);
+    result |= (PORTCbits.RC1 << 1);
+    result |= (PORTCbits.RC2 << 2);
+    result |= (PORTCbits.RC3 << 3);
+    result |= (PORTCbits.RC4 << 4);
+    result |= (PORTCbits.RC5 << 5);
+
+
+    return result;
 }
 
 void init_ports(void)
@@ -4932,6 +4950,7 @@ void init_ports(void)
 
     LATBbits.LATB1 = 0;
 
+    init_inputs_RC0_to_RC5();
 }
 
 
@@ -4993,40 +5012,44 @@ void main(void)
         {
             uart_frame_ready = 0;
 
-
-            if (strcmp((char*)uart_rx_buffer, "CONN_REQ\r\n") == 0)
+            if (strstr((char*)uart_rx_buffer, "CONN_REQ"))
             {
                 UART_SendString("CONN_ACK\r\n");
             }
-            else if (strcmp((char*)uart_rx_buffer, "SHOW_001\r\n") == 0)
+            else if (strstr((char*)uart_rx_buffer, "SHOW_001"))
             {
 
                 SelectIO(1);
             }
-            else if (strcmp((char*)uart_rx_buffer, "SHOW_002\r\n") == 0)
+            else if (strstr((char*)uart_rx_buffer, "SHOW_002"))
             {
 
                 SelectIO(2);
             }
-            else if (strcmp((char*)uart_rx_buffer, "SHOW_003\r\n") == 0)
+            else if (strstr((char*)uart_rx_buffer, "SHOW_003"))
             {
 
                 SelectIO(3);
             }
-            else if (strcmp((char*)uart_rx_buffer, "SHOW_004\r\n") == 0)
+            else if (strstr((char*)uart_rx_buffer, "SHOW_004"))
             {
 
                 SelectIO(4);
             }
-            else if (strcmp((char*)uart_rx_buffer, "SHOW_005\r\n") == 0)
+            else if (strstr((char*)uart_rx_buffer, "SHOW_005"))
             {
 
                 SelectIO(5);
             }
-            else if (strcmp((char*)uart_rx_buffer, "SHOW_006\r\n") == 0)
+            else if (strstr((char*)uart_rx_buffer, "SHOW_006"))
             {
 
                 SelectIO(6);
+            }
+            else if (strstr((char*)uart_rx_buffer, "SHOW_000"))
+            {
+
+                SelectIO(0);
             }
             uart_rx_index = 0;
         }

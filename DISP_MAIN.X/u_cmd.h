@@ -1,3 +1,12 @@
+/*
+ * @Author: wangchao
+ * @Date: 2025-05-05 14:08:43
+ * @LastEditors: wangchao
+ * @LastEditTime: 2025-05-17 20:22:53
+ * @FilePath: \DISP_MAIN.X\u_cmd.h
+ * @Description:
+ * Copyright (c) 2025 by Bingshan Guardian, All Rights Reserved.
+ */
 
 #ifndef _U_CMD_H
 #define _U_CMD_H
@@ -10,5 +19,7 @@
 #define APP_TEST_SHOW_5    "SHOW_005"
 #define APP_TEST_SHOW_6    "SHOW_006"
 #define APP_TEST_SHOW_0    "SHOW_000"
+#define APP_TEST_READ_PORT "READ_PIN"
+#define APP_TEST_SET_RC5   "SET1_RC5"
 
 #endif

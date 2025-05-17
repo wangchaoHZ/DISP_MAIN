@@ -4908,11 +4908,25 @@ void latch_data(uint8_t seg_data)
     LATBbits.LATB1 = 0;
 }
 
-void select_digit(uint8_t digit_pos)
+void init_inputs_RC0_to_RC4(void)
 {
+    TRISCbits.TRISC0 = 1;
+    TRISCbits.TRISC1 = 1;
+    TRISCbits.TRISC2 = 1;
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 1;
+}
 
-    LATC &= 0xF8;
-    LATC |= (digit_pos & 0x07);
+uint8_t read_RC_inputs(void)
+{
+    uint8_t result = 0;
+
+    result |= (PORTCbits.RC0 << 0);
+    result |= (PORTCbits.RC1 << 1);
+    result |= (PORTCbits.RC2 << 2);
+    result |= (PORTCbits.RC3 << 3);
+    result |= (PORTCbits.RC4 << 4);
+    return result;
 }
 
 void init_ports(void)
@@ -4932,6 +4946,15 @@ void init_ports(void)
 
     LATBbits.LATB1 = 0;
 
+    TRISCbits.TRISC5 = 0;
+    LATCbits.LATC5 = 0;
+
+
+    TRISBbits.TRISB0 = 0;
+
+    LATBbits.LATB0 = 0;
+
+    init_inputs_RC0_to_RC4();
 }
 
 
@@ -4993,12 +5016,6 @@ void main(void)
         {
             uart_frame_ready = 0;
 
-
-
-
-
-
-
             if (strstr((char*)uart_rx_buffer, "CONN_REQ"))
             {
                 UART_SendString("CONN_ACK\r\n");
@@ -5038,6 +5055,27 @@ void main(void)
 
                 SelectIO(0);
             }
+            else if (strstr((char*)uart_rx_buffer, "READ_PIN"))
+            {
+                uint8_t rc_input = read_RC_inputs();
+                sprintf(buffer, "RC:%02X\r\n", rc_input);
+                UART_SendString(buffer);
+            }
+            else if (strstr((char*)uart_rx_buffer, "SET1_RC5"))
+            {
+
+                LATCbits.LATC5 = 1;
+            }
+            else
+            {
+                UART_SendString("ERROR:UNKNOWN_CMD:");
+                for (char i = 0; i < 10; i++)
+                {
+                    UART_SendChar(uart_rx_buffer[i]);
+                }
+                UART_SendString("\r\n");
+            }
+
             uart_rx_index = 0;
         }
     }

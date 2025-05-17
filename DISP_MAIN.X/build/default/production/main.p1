@@ -21,9 +21,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1116
 [; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1116: extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
 [v _LATBbits `VS47 ~T0 @X0 0 e@3978 ]
-"1201
-[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1201: extern volatile unsigned char LATC __attribute__((address(0xF8B)));
-[v _LATC `Vuc ~T0 @X0 0 e@3979 ]
+"1932
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1932:     struct {
+[s S72 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S72 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1942
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1942:     struct {
+[s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S73 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"1931
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1931: typedef union {
+[u S71 `S72 1 `S73 1 ]
+[n S71 . . . ]
+"1953
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1953: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
+[v _TRISCbits `VS71 ~T0 @X0 0 e@3988 ]
+"456
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 456:     struct {
+[s S23 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S23 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"466
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 466:     struct {
+[s S24 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S24 . T1OSO T1OSI CCP1 SCK SDI SDO TX RX ]
+"476
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 476:     struct {
+[s S25 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S25 . T13CKI CCP2 . SCL SDA . CK DT ]
+"486
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 486:     struct {
+[s S26 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S26 . T1CKI . P1A ]
+"491
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 491:     struct {
+[s S27 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S27 . . PA2 PA1 ]
+"455
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 455: typedef union {
+[u S22 `S23 1 `S24 1 `S25 1 `S26 1 `S27 1 ]
+[n S22 . . . . . . ]
+"497
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 497: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
+[v _PORTCbits `VS22 ~T0 @X0 0 e@3970 ]
 "1710
 [; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1710:     struct {
 [s S66 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -69,6 +108,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2393
 [; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 2393: extern volatile TRISEbits_t TRISEbits __attribute__((address(0xF96)));
 [v _TRISEbits `VS83 ~T0 @X0 0 e@3990 ]
+"1207
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1207:     struct {
+[s S51 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S51 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"1217
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1217:     struct {
+[s S52 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S52 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+"1206
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1206: typedef union {
+[u S50 `S51 1 `S52 1 ]
+[n S50 . . . ]
+"1228
+[; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 1228: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
+[v _LATCbits `VS50 ~T0 @X0 0 e@3979 ]
 "983
 [; ;D:/AppSetup/MPLABX/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc/pic18f4520.h: 983:     struct {
 [s S45 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -115,6 +169,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "26
 [; ;./u_uart.h: 26: void UART_SendString(const char* str);
 [v _UART_SendString `(v ~T0 @X0 0 ef1`*Cuc ]
+"121 C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/stdio.h
+[; ;C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/stdio.h: 121: int sprintf(char *restrict, const char *restrict, ...);
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"25 ./u_uart.h
+[; ;./u_uart.h: 25: void UART_SendChar(char ch);
+[v _UART_SendChar `(v ~T0 @X0 0 ef1`uc ]
 "21
 [; ;./u_uart.h: 21: extern volatile uint8_t uart_rx_index;
 [v _uart_rx_index `Vuc ~T0 @X0 0 e ]
@@ -545,420 +605,551 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 22: {
 [p x PWRT  =  OFF    ]
 "23
-[; ;main.c: 23: 
+[; ;main.c: 23:     TRISCbits.TRISC0 = 1;
 [p x BOREN  =  OFF   ]
 "24
-[; ;main.c: 24:     LATC &= 0xF8;
+[; ;main.c: 24:     TRISCbits.TRISC1 = 1;
 [p x BORV  =  3      ]
 "27
-[; ;main.c: 27: 
+[; ;main.c: 27:     TRISCbits.TRISC4 = 1;
 [p x WDT  =  OFF       ]
 "28
-[; ;main.c: 28: void init_ports(void)
+[; ;main.c: 28: }
 [p x WDTPS  =  32768   ]
 "31
-[; ;main.c: 31: 
+[; ;main.c: 31: {
 [p x CCP2MX  =  PORTC   ]
 "34
-[; ;main.c: 34: 
+[; ;main.c: 34:     result |= (PORTCbits.RC0 << 0);
 [p x LVP  =  OFF     ]
 "35
-[; ;main.c: 35: 
+[; ;main.c: 35:     result |= (PORTCbits.RC1 << 1);
 [p x DEBUG  =  OFF   ]
 "37
-[; ;main.c: 37:     TRISAbits.TRISA1 = 0;
+[; ;main.c: 37:     result |= (PORTCbits.RC3 << 3);
 [v _delay_ms `(v ~T0 @X0 1 ef1`ui ]
 "38
-[; ;main.c: 38:     TRISAbits.TRISA2 = 0;
+[; ;main.c: 38:     result |= (PORTCbits.RC4 << 4);
 {
 [e :U _delay_ms ]
 "37
-[; ;main.c: 37:     TRISAbits.TRISA1 = 0;
+[; ;main.c: 37:     result |= (PORTCbits.RC3 << 3);
 [v _ms `ui ~T0 @X0 1 r1 ]
 "38
-[; ;main.c: 38:     TRISAbits.TRISA2 = 0;
+[; ;main.c: 38:     result |= (PORTCbits.RC4 << 4);
 [f ]
 "39
-[; ;main.c: 39:     TRISAbits.TRISA3 = 0;
+[; ;main.c: 39:     return result;
 [e $U 285  ]
 [e :U 286 ]
 "40
-[; ;main.c: 40:     TRISAbits.TRISA5 = 0;
+[; ;main.c: 40: }
 {
 "41
-[; ;main.c: 41:     TRISEbits.TRISE0 = 0;
+[; ;main.c: 41: 
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
 "42
-[; ;main.c: 42: 
+[; ;main.c: 42: void init_ports(void)
 }
 [e :U 285 ]
 "39
-[; ;main.c: 39:     TRISAbits.TRISA3 = 0;
+[; ;main.c: 39:     return result;
 [e $ != -- _ms -> -> 1 `i `ui -> -> 0 `i `ui 286  ]
 [e :U 287 ]
 "43
-[; ;main.c: 43:     LATBbits.LATB1 = 0;
+[; ;main.c: 43: {
 [e :UE 284 ]
 }
 "45
-[; ;main.c: 45: }
+[; ;main.c: 45: 
 [v _latch_data `(v ~T0 @X0 1 ef1`uc ]
 "46
-[; ;main.c: 46: 
+[; ;main.c: 46:     TRISBbits.TRISB1 = 0;
 {
 [e :U _latch_data ]
 "45
-[; ;main.c: 45: }
+[; ;main.c: 45: 
 [v _seg_data `uc ~T0 @X0 1 r1 ]
 "46
-[; ;main.c: 46: 
+[; ;main.c: 46:     TRISBbits.TRISB1 = 0;
 [f ]
 "48
-[; ;main.c: 48: void SelectIO(uint8_t index)
+[; ;main.c: 48: 
 [e = _LATD _seg_data ]
 "51
-[; ;main.c: 51:     LATAbits.LATA0 = 0;
+[; ;main.c: 51:     TRISAbits.TRISA1 = 0;
 [e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 "52
-[; ;main.c: 52:     LATAbits.LATA1 = 0;
+[; ;main.c: 52:     TRISAbits.TRISA2 = 0;
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 10000000 `l `d .4000000.0 `ul ]
 "53
-[; ;main.c: 53:     LATAbits.LATA2 = 0;
+[; ;main.c: 53:     TRISAbits.TRISA3 = 0;
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 "54
-[; ;main.c: 54:     LATAbits.LATA3 = 0;
+[; ;main.c: 54:     TRISAbits.TRISA5 = 0;
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 10000000 `l `d .4000000.0 `ul ]
 "55
-[; ;main.c: 55:     LATAbits.LATA5 = 0;
+[; ;main.c: 55:     TRISEbits.TRISE0 = 0;
 [e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 "56
-[; ;main.c: 56:     LATEbits.LATE0 = 0;
+[; ;main.c: 56: 
 [e :UE 288 ]
 }
 "58
 [; ;main.c: 58: 
-[v _select_digit `(v ~T0 @X0 1 ef1`uc ]
+[v _init_inputs_RC0_to_RC4 `(v ~T0 @X0 1 ef ]
 "59
-[; ;main.c: 59:     switch (index)
+[; ;main.c: 59:     TRISCbits.TRISC5 = 0;
 {
-[e :U _select_digit ]
-"58
-[; ;main.c: 58: 
-[v _digit_pos `uc ~T0 @X0 1 r1 ]
-"59
-[; ;main.c: 59:     switch (index)
+[e :U _init_inputs_RC0_to_RC4 ]
 [f ]
+"60
+[; ;main.c: 60:     LATCbits.LATC5 = 0;
+[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
 "61
-[; ;main.c: 61:         case 6:
-[e =& _LATC -> -> 248 `i `Vuc ]
+[; ;main.c: 61: 
+[e = . . _TRISCbits 0 1 -> -> 1 `i `uc ]
 "62
-[; ;main.c: 62:             LATAbits.LATA0 = 1;
-[e =| _LATC -> & -> _digit_pos `i -> 7 `i `Vuc ]
+[; ;main.c: 62: 
+[e = . . _TRISCbits 0 2 -> -> 1 `i `uc ]
 "63
-[; ;main.c: 63:             break;
+[; ;main.c: 63:     TRISBbits.TRISB0 = 0;
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
+"64
+[; ;main.c: 64: 
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
+"65
+[; ;main.c: 65:     LATBbits.LATB0 = 0;
 [e :UE 289 ]
 }
-"65
-[; ;main.c: 65:             LATAbits.LATA1 = 1;
+"67
+[; ;main.c: 67:     init_inputs_RC0_to_RC4();
+[v _read_RC_inputs `(uc ~T0 @X0 1 ef ]
+"68
+[; ;main.c: 68: }
+{
+[e :U _read_RC_inputs ]
+[f ]
+"69
+[; ;main.c: 69: 
+[v _result `uc ~T0 @X0 1 a ]
+[e = _result -> -> 0 `i `uc ]
+"71
+[; ;main.c: 71: void SelectIO(uint8_t index)
+[e =| _result -> << -> . . _PORTCbits 0 0 `i -> 0 `i `uc ]
+"72
+[; ;main.c: 72: {
+[e =| _result -> << -> . . _PORTCbits 0 1 `i -> 1 `i `uc ]
+"73
+[; ;main.c: 73: 
+[e =| _result -> << -> . . _PORTCbits 0 2 `i -> 2 `i `uc ]
+"74
+[; ;main.c: 74:     LATAbits.LATA0 = 0;
+[e =| _result -> << -> . . _PORTCbits 0 3 `i -> 3 `i `uc ]
+"75
+[; ;main.c: 75:     LATAbits.LATA1 = 0;
+[e =| _result -> << -> . . _PORTCbits 0 4 `i -> 4 `i `uc ]
+"76
+[; ;main.c: 76:     LATAbits.LATA2 = 0;
+[e ) _result ]
+[e $UE 290  ]
+"77
+[; ;main.c: 77:     LATAbits.LATA3 = 0;
+[e :UE 290 ]
+}
+"79
+[; ;main.c: 79:     LATEbits.LATE0 = 0;
 [v _init_ports `(v ~T0 @X0 1 ef ]
-"66
-[; ;main.c: 66:             break;
+"80
+[; ;main.c: 80: 
 {
 [e :U _init_ports ]
 [f ]
-"69
-[; ;main.c: 69:             break;
+"83
+[; ;main.c: 83:     {
 [e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"73
-[; ;main.c: 73: 
+"87
+[; ;main.c: 87:         case 5:
 [e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
-"74
-[; ;main.c: 74:         case 2:
-[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
-"75
-[; ;main.c: 75:             LATEbits.LATE0 = 1;
-[e = . . _TRISAbits 0 2 -> -> 0 `i `uc ]
-"76
-[; ;main.c: 76:             break;
-[e = . . _TRISAbits 0 3 -> -> 0 `i `uc ]
-"77
-[; ;main.c: 77: 
-[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
-"78
-[; ;main.c: 78:         case 1:
-[e = . . _TRISEbits 0 0 -> -> 0 `i `uc ]
-"80
-[; ;main.c: 80:             break;
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-"82
-[; ;main.c: 82:             break;
-[e :UE 290 ]
-}
-"85
-[; ;main.c: 85: 
-[v _SelectIO `(v ~T0 @X0 1 ef1`uc ]
-"86
-[; ;main.c: 86: char buffer[20];
-{
-[e :U _SelectIO ]
-"85
-[; ;main.c: 85: 
-[v _index `uc ~T0 @X0 1 r1 ]
-"86
-[; ;main.c: 86: char buffer[20];
-[f ]
 "88
-[; ;main.c: 88: void main(void)
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 88:             LATAbits.LATA1 = 1;
+[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
 "89
-[; ;main.c: 89: {
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 89:             break;
+[e = . . _TRISAbits 0 2 -> -> 0 `i `uc ]
 "90
-[; ;main.c: 90:     delay_ms(500);
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 90:         case 4:
+[e = . . _TRISAbits 0 3 -> -> 0 `i `uc ]
 "91
-[; ;main.c: 91: 
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 91:             LATAbits.LATA2 = 1;
+[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
 "92
-[; ;main.c: 92:     UART_Init();
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-"93
-[; ;main.c: 93: 
-[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 92:             break;
+[e = . . _TRISEbits 0 0 -> -> 0 `i `uc ]
+"94
+[; ;main.c: 94:             LATAbits.LATA3 = 1;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 "96
 [; ;main.c: 96: 
-[e $U 293  ]
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
 "97
-[; ;main.c: 97:     SelectIO(0);
-{
-"98
-[; ;main.c: 98:     latch_data(0xFF);
-[e :U 294 ]
-"99
-[; ;main.c: 99: 
-[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 97:         case 2:
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 "100
-[; ;main.c: 100:     while (1)
-[e $U 292  ]
-"101
-[; ;main.c: 101:     {
-[e :U 295 ]
+[; ;main.c: 100: 
+[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
 "102
-[; ;main.c: 102:         if (uart_frame_ready)
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-"103
-[; ;main.c: 103:         {
-[e $U 292  ]
+[; ;main.c: 102:             LATAbits.LATA5 = 1;
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
 "104
-[; ;main.c: 104:             uart_frame_ready = 0;
-[e :U 296 ]
+[; ;main.c: 104:         default:
+[e ( _init_inputs_RC0_to_RC4 ..  ]
 "105
-[; ;main.c: 105: 
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-"106
-[; ;main.c: 106: 
-[e $U 292  ]
-"107
-[; ;main.c: 107: 
-[e :U 297 ]
-"108
-[; ;main.c: 108: 
-[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
-"109
-[; ;main.c: 109: 
-[e $U 292  ]
-"111
-[; ;main.c: 111: 
-[e :U 298 ]
-"112
-[; ;main.c: 112:             if (strstr((char*)uart_rx_buffer, "CONN_REQ"))
-[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
-"113
-[; ;main.c: 113:             {
-[e $U 292  ]
-"115
-[; ;main.c: 115:             }
-[e :U 299 ]
-"116
-[; ;main.c: 116:             else if (strstr((char*)uart_rx_buffer, "SHOW_001"))
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-"117
-[; ;main.c: 117:             {
-[e $U 292  ]
-"118
-[; ;main.c: 118: 
-[e :U 300 ]
-"119
-[; ;main.c: 119:                 SelectIO(1);
-[e $U 292  ]
-"120
-[; ;main.c: 120:             }
-}
-[e $U 292  ]
-[e :U 293 ]
-[e [\ _index , $ -> 6 `i 294
- , $ -> 5 `i 295
- , $ -> 4 `i 296
- , $ -> 3 `i 297
- , $ -> 2 `i 298
- , $ -> 1 `i 299
- 300 ]
-[e :U 292 ]
-"121
-[; ;main.c: 121:             else if (strstr((char*)uart_rx_buffer, "SHOW_002"))
+[; ;main.c: 105:             break;
 [e :UE 291 ]
 }
+"108
+[; ;main.c: 108: 
+[v _SelectIO `(v ~T0 @X0 1 ef1`uc ]
+"109
+[; ;main.c: 109: char buffer[20];
+{
+[e :U _SelectIO ]
+"108
+[; ;main.c: 108: 
+[v _index `uc ~T0 @X0 1 r1 ]
+"109
+[; ;main.c: 109: char buffer[20];
+[f ]
+"111
+[; ;main.c: 111: void main(void)
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+"112
+[; ;main.c: 112: {
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+"113
+[; ;main.c: 113:     delay_ms(500);
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+"114
+[; ;main.c: 114: 
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+"115
+[; ;main.c: 115:     UART_Init();
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+"116
+[; ;main.c: 116: 
+[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
+"119
+[; ;main.c: 119: 
+[e $U 294  ]
+"120
+[; ;main.c: 120:     SelectIO(0);
+{
+"121
+[; ;main.c: 121:     latch_data(0xFF);
+[e :U 295 ]
+"122
+[; ;main.c: 122: 
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
 "123
-[; ;main.c: 123: 
+[; ;main.c: 123:     while (1)
+[e $U 293  ]
+"124
+[; ;main.c: 124:     {
+[e :U 296 ]
+"125
+[; ;main.c: 125:         if (uart_frame_ready)
+[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
+"126
+[; ;main.c: 126:         {
+[e $U 293  ]
+"127
+[; ;main.c: 127:             uart_frame_ready = 0;
+[e :U 297 ]
+"128
+[; ;main.c: 128: 
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+"129
+[; ;main.c: 129:             if (strstr((char*)uart_rx_buffer, "CONN_REQ"))
+[e $U 293  ]
+"130
+[; ;main.c: 130:             {
+[e :U 298 ]
+"131
+[; ;main.c: 131:                 UART_SendString("CONN_ACK\r\n");
+[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
+"132
+[; ;main.c: 132:             }
+[e $U 293  ]
+"134
+[; ;main.c: 134:             {
+[e :U 299 ]
+"135
+[; ;main.c: 135: 
+[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
+"136
+[; ;main.c: 136:                 SelectIO(1);
+[e $U 293  ]
+"138
+[; ;main.c: 138:             else if (strstr((char*)uart_rx_buffer, "SHOW_002"))
+[e :U 300 ]
+"139
+[; ;main.c: 139:             {
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+"140
+[; ;main.c: 140: 
+[e $U 293  ]
+"141
+[; ;main.c: 141:                 SelectIO(2);
+[e :U 301 ]
+"142
+[; ;main.c: 142:             }
+[e $U 293  ]
+"143
+[; ;main.c: 143:             else if (strstr((char*)uart_rx_buffer, "SHOW_003"))
+}
+[e $U 293  ]
+[e :U 294 ]
+[e [\ _index , $ -> 6 `i 295
+ , $ -> 5 `i 296
+ , $ -> 4 `i 297
+ , $ -> 3 `i 298
+ , $ -> 2 `i 299
+ , $ -> 1 `i 300
+ 301 ]
+[e :U 293 ]
+"144
+[; ;main.c: 144:             {
+[e :UE 292 ]
+}
+"146
+[; ;main.c: 146:                 SelectIO(3);
 [v _buffer `uc ~T0 @X0 -> 20 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"125
-[; ;main.c: 125:             }
+"148
+[; ;main.c: 148:             else if (strstr((char*)uart_rx_buffer, "SHOW_004"))
 [v _main `(v ~T0 @X0 1 ef ]
-"126
-[; ;main.c: 126:             else if (strstr((char*)uart_rx_buffer, "SHOW_003"))
+"149
+[; ;main.c: 149:             {
 {
 [e :U _main ]
 [f ]
-"127
-[; ;main.c: 127:             {
-[e ( _delay_ms (1 -> -> 500 `i `ui ]
-"129
-[; ;main.c: 129:                 SelectIO(3);
-[e ( _UART_Init ..  ]
-"132
-[; ;main.c: 132:             {
-[e ( _init_ports ..  ]
-"134
-[; ;main.c: 134:                 SelectIO(4);
-[e ( _SelectIO (1 -> -> 0 `i `uc ]
-"135
-[; ;main.c: 135:             }
-[e ( _latch_data (1 -> -> 255 `i `uc ]
-"137
-[; ;main.c: 137:             {
-[e :U 303 ]
-"138
-[; ;main.c: 138: 
-{
-"139
-[; ;main.c: 139:                 SelectIO(5);
-[e $ ! != -> _uart_frame_ready `i -> 0 `i 305  ]
-"140
-[; ;main.c: 140:             }
-{
-"141
-[; ;main.c: 141:             else if (strstr((char*)uart_rx_buffer, "SHOW_006"))
-[e = _uart_frame_ready -> -> 0 `i `a ]
-"149
-[; ;main.c: 149:                 SelectIO(0);
-[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 2C -> -> 0 `i `*uc 306  ]
 "150
-[; ;main.c: 150:             }
-{
-"151
-[; ;main.c: 151:             uart_rx_index = 0;
-[e ( _UART_SendString (1 :s 3C ]
+[; ;main.c: 150: 
+[e ( _delay_ms (1 -> -> 500 `i `ui ]
 "152
-[; ;main.c: 152:         }
-}
-[e $U 307  ]
-"153
-[; ;main.c: 153:     }
-[e :U 306 ]
-[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 5C -> -> 0 `i `*uc 308  ]
-"154
-[; ;main.c: 154: }
-{
-"156
-[e ( _SelectIO (1 -> -> 1 `i `uc ]
+[; ;main.c: 152:             }
+[e ( _UART_Init ..  ]
+"155
+[; ;main.c: 155: 
+[e ( _init_ports ..  ]
 "157
-}
-[e $U 309  ]
-"158
-[e :U 308 ]
-[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 7C -> -> 0 `i `*uc 310  ]
-"159
-{
-"161
-[e ( _SelectIO (1 -> -> 2 `i `uc ]
-"162
-}
-[e $U 311  ]
-"163
-[e :U 310 ]
-[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 9C -> -> 0 `i `*uc 312  ]
-"164
-{
-"166
-[e ( _SelectIO (1 -> -> 3 `i `uc ]
-"167
-}
-[e $U 313  ]
-"168
-[e :U 312 ]
-[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 11C -> -> 0 `i `*uc 314  ]
-"169
-{
-"171
-[e ( _SelectIO (1 -> -> 4 `i `uc ]
-"172
-}
-[e $U 315  ]
-"173
-[e :U 314 ]
-[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 13C -> -> 0 `i `*uc 316  ]
-"174
-{
-"176
-[e ( _SelectIO (1 -> -> 5 `i `uc ]
-"177
-}
-[e $U 317  ]
-"178
-[e :U 316 ]
-[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 15C -> -> 0 `i `*uc 318  ]
-"179
-{
-"181
-[e ( _SelectIO (1 -> -> 6 `i `uc ]
-"182
-}
-[e $U 319  ]
-"183
-[e :U 318 ]
-[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 17C -> -> 0 `i `*uc 320  ]
-"184
-{
-"186
+[; ;main.c: 157:             }
 [e ( _SelectIO (1 -> -> 0 `i `uc ]
-"187
-}
-[e :U 320 ]
-[e :U 319 ]
-[e :U 317 ]
-[e :U 315 ]
-[e :U 313 ]
-[e :U 311 ]
-[e :U 309 ]
-[e :U 307 ]
-"188
-[e = _uart_rx_index -> -> 0 `i `uc ]
-"189
-}
-[e :U 305 ]
-"190
-}
-[e :U 302 ]
-[e $U 303  ]
+"158
+[; ;main.c: 158:             else if (strstr((char*)uart_rx_buffer, "SHOW_006"))
+[e ( _latch_data (1 -> -> 255 `i `uc ]
+"160
+[; ;main.c: 160: 
 [e :U 304 ]
-"191
-[e :UE 301 ]
+"161
+[; ;main.c: 161:                 SelectIO(6);
+{
+"162
+[; ;main.c: 162:             }
+[e $ ! != -> _uart_frame_ready `i -> 0 `i 306  ]
+"163
+[; ;main.c: 163:             else if (strstr((char*)uart_rx_buffer, "SHOW_000"))
+{
+"164
+[; ;main.c: 164:             {
+[e = _uart_frame_ready -> -> 0 `i `a ]
+"166
+[; ;main.c: 166:                 SelectIO(0);
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 2C -> -> 0 `i `*uc 307  ]
+"167
+[; ;main.c: 167:             }
+{
+"168
+[; ;main.c: 168:             else if (strstr((char*)uart_rx_buffer, "READ_PIN"))
+[e ( _UART_SendString (1 :s 3C ]
+"169
+[; ;main.c: 169:             {
 }
+[e $U 308  ]
+"170
+[; ;main.c: 170:                 uint8_t rc_input = read_RC_inputs();
+[e :U 307 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 5C -> -> 0 `i `*uc 309  ]
+"171
+[; ;main.c: 171:                 sprintf(buffer, "RC:%02X\r\n", rc_input);
+{
+"173
+[; ;main.c: 173:             }
+[e ( _SelectIO (1 -> -> 1 `i `uc ]
+"174
+[; ;main.c: 174:             else if (strstr((char*)uart_rx_buffer, "SET1_RC5"))
+}
+[e $U 310  ]
+"175
+[; ;main.c: 175:             {
+[e :U 309 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 7C -> -> 0 `i `*uc 311  ]
+"176
+[; ;main.c: 176: 
+{
+"178
+[; ;main.c: 178:             }
+[e ( _SelectIO (1 -> -> 2 `i `uc ]
+"179
+[; ;main.c: 179:             else
+}
+[e $U 312  ]
+"180
+[; ;main.c: 180:             {
+[e :U 311 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 9C -> -> 0 `i `*uc 313  ]
+"181
+[; ;main.c: 181:                 UART_SendString("ERROR:UNKNOWN_CMD:");
+{
+"183
+[; ;main.c: 183:                 {
+[e ( _SelectIO (1 -> -> 3 `i `uc ]
+"184
+[; ;main.c: 184:                     UART_SendChar(uart_rx_buffer[i]);
+}
+[e $U 314  ]
+"185
+[; ;main.c: 185:                 }
+[e :U 313 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 11C -> -> 0 `i `*uc 315  ]
+"186
+[; ;main.c: 186:                 UART_SendString("\r\n");
+{
+"188
+[; ;main.c: 188: 
+[e ( _SelectIO (1 -> -> 4 `i `uc ]
+"189
+[; ;main.c: 189:             uart_rx_index = 0;
+}
+[e $U 316  ]
+"190
+[; ;main.c: 190:         }
+[e :U 315 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 13C -> -> 0 `i `*uc 317  ]
+"191
+[; ;main.c: 191:     }
+{
+"193
+[e ( _SelectIO (1 -> -> 5 `i `uc ]
+"194
+}
+[e $U 318  ]
+"195
+[e :U 317 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 15C -> -> 0 `i `*uc 319  ]
+"196
+{
+"198
+[e ( _SelectIO (1 -> -> 6 `i `uc ]
+"199
+}
+[e $U 320  ]
+"200
+[e :U 319 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 17C -> -> 0 `i `*uc 321  ]
+"201
+{
+"203
+[e ( _SelectIO (1 -> -> 0 `i `uc ]
+"204
+}
+[e $U 322  ]
+"205
+[e :U 321 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 19C -> -> 0 `i `*uc 323  ]
+"206
+{
+"207
+[v _rc_input `uc ~T0 @X0 1 a ]
+[e = _rc_input ( _read_RC_inputs ..  ]
+"208
+[e ( _sprintf (1 , (. , &U _buffer :s 20C -> _rc_input `i ]
+"209
+[e ( _UART_SendString (1 -> &U _buffer `*Cuc ]
+"210
+}
+[e $U 324  ]
+"211
+[e :U 323 ]
+[e $ ! != ( _strstr (2 , -> -> &U _uart_rx_buffer `*uc `*Cuc :s 22C -> -> 0 `i `*uc 325  ]
+"212
+{
+"214
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+"215
+}
+[e $U 326  ]
+"216
+[e :U 325 ]
+"217
+{
+"218
+[e ( _UART_SendString (1 :s 23C ]
+"219
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 10 `i 327  ]
+[e $U 328  ]
+[e :U 327 ]
+"220
+{
+"221
+[e ( _UART_SendChar (1 -> *U + &U _uart_rx_buffer * -> _i `ux -> -> # *U &U _uart_rx_buffer `ui `ux `uc ]
+"222
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 10 `i 327  ]
+[e :U 328 ]
+}
+"223
+[e ( _UART_SendString (1 :s 24C ]
+"224
+}
+[e :U 326 ]
+[e :U 324 ]
+[e :U 322 ]
+[e :U 320 ]
+[e :U 318 ]
+[e :U 316 ]
+[e :U 314 ]
+[e :U 312 ]
+[e :U 310 ]
+[e :U 308 ]
+"226
+[e = _uart_rx_index -> -> 0 `i `uc ]
+"227
+}
+[e :U 306 ]
+"228
+}
+[e :U 303 ]
+[e $U 304  ]
+[e :U 305 ]
+"229
+[e :UE 302 ]
+}
+[p f _sprintf 10518532 ]
 [a 1C 67 79 78 78 95 82 69 81 0 ]
 [a 2C 67 79 78 78 95 82 69 81 0 ]
+[a 18C 82 69 65 68 95 80 73 78 0 ]
+[a 19C 82 69 65 68 95 80 73 78 0 ]
+[a 23C 69 82 82 79 82 58 85 78 75 78 79 87 78 95 67 77 68 58 0 ]
 [a 14C 83 72 79 87 95 48 48 54 0 ]
 [a 15C 83 72 79 87 95 48 48 54 0 ]
+[a 21C 83 69 84 49 95 82 67 53 0 ]
+[a 22C 83 69 84 49 95 82 67 53 0 ]
 [a 12C 83 72 79 87 95 48 48 53 0 ]
 [a 13C 83 72 79 87 95 48 48 53 0 ]
 [a 10C 83 72 79 87 95 48 48 52 0 ]
@@ -971,4 +1162,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 5C 83 72 79 87 95 48 48 49 0 ]
 [a 16C 83 72 79 87 95 48 48 48 0 ]
 [a 17C 83 72 79 87 95 48 48 48 0 ]
+[a 20C 82 67 58 37 48 50 88 13 10 0 ]
 [a 3C 67 79 78 78 95 65 67 75 13 10 0 ]
+[a 24C 13 10 0 ]
