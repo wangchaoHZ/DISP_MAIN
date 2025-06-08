@@ -4917,15 +4917,25 @@ void init_inputs_RC0_to_RC4(void)
     TRISCbits.TRISC4 = 1;
 }
 
-uint8_t read_RC_inputs(void)
+uint8_t read_spi_inputs(void)
+{
+    uint8_t result = 0;
+
+    uint8_t rc3 = PORTCbits.RC3;
+    uint8_t rc4 = PORTCbits.RC4;
+# 92 "main.c"
+    result |= (rc3 << 0);
+    result |= (rc4 << 1);
+    return result;
+}
+
+uint8_t read_key_inputs(void)
 {
     uint8_t result = 0;
 
     result |= (PORTCbits.RC0 << 0);
     result |= (PORTCbits.RC1 << 1);
     result |= (PORTCbits.RC2 << 2);
-    result |= (PORTCbits.RC3 << 3);
-    result |= (PORTCbits.RC4 << 4);
     return result;
 }
 
@@ -4947,12 +4957,22 @@ void init_ports(void)
     LATBbits.LATB1 = 0;
 
     TRISCbits.TRISC5 = 0;
+
     LATCbits.LATC5 = 0;
 
 
     TRISBbits.TRISB0 = 0;
 
-    LATBbits.LATB0 = 0;
+    LATBbits.LATB0 = 1;
+
+    TRISDbits.TRISD0 = 0;
+    TRISDbits.TRISD1 = 0;
+    TRISDbits.TRISD2 = 0;
+    TRISDbits.TRISD3 = 0;
+    TRISDbits.TRISD4 = 0;
+    TRISDbits.TRISD5 = 0;
+    TRISDbits.TRISD6 = 0;
+    TRISDbits.TRISD7 = 0;
 
     init_inputs_RC0_to_RC4();
 }
@@ -4967,6 +4987,8 @@ void SelectIO(uint8_t index)
     LATAbits.LATA3 = 0;
     LATAbits.LATA5 = 0;
     LATEbits.LATE0 = 0;
+
+    latch_data(0xff);
 
 
     switch (index)
@@ -4998,17 +5020,183 @@ void SelectIO(uint8_t index)
 
 char buffer[20];
 
+uint8_t RED_KEY_BYTE = 0;
+uint8_t GREEN_KEY_BYTE = 0;
+
+char red_str[9];
+char green_str[9];
+
+void byte_to_bit_string(uint8_t byte, char* str)
+{
+    for (int i = 7; i >= 0; i--)
+    {
+        *str++ = (byte & (1 << i)) ? '1' : '0';
+    }
+    *str = '\0';
+}
+
+void reset_usr_key_value(void)
+{
+    RED_KEY_BYTE = 0;
+    GREEN_KEY_BYTE = 0;
+}
+
+uint16_t get_key_value(void)
+{
+    return (uint16_t)((RED_KEY_BYTE << 8) | GREEN_KEY_BYTE);
+}
+
+
+void scan_usr_key(void)
+{
+    uint8_t retx = 0;
+    latch_data(0x00);
+
+    delay_ms(20);
+    LATAbits.LATA0 = 1;
+    LATAbits.LATA1 = 0;
+    LATAbits.LATA2 = 0;
+    LATAbits.LATA3 = 0;
+    LATEbits.LATE0 = 0;
+    LATAbits.LATA5 = 0;
+    retx = read_key_inputs();
+    if (retx == 6 || retx == 5)
+    {
+        switch (retx)
+        {
+            case 6:
+                RED_KEY_BYTE |= (1 << 0);
+                break;
+            case 5:
+                GREEN_KEY_BYTE |= (1 << 0);
+                break;
+        }
+    }
+
+    delay_ms(20);
+    LATAbits.LATA0 = 0;
+    LATAbits.LATA1 = 1;
+    LATAbits.LATA2 = 0;
+    LATAbits.LATA3 = 0;
+    LATEbits.LATE0 = 0;
+    LATAbits.LATA5 = 0;
+    retx = read_key_inputs();
+    if (retx == 6 || retx == 5)
+    {
+        switch (retx)
+        {
+            case 6:
+                RED_KEY_BYTE |= (1 << 1);
+                break;
+            case 5:
+                GREEN_KEY_BYTE |= (1 << 1);
+                break;
+        }
+    }
+
+    delay_ms(20);
+    LATAbits.LATA0 = 0;
+    LATAbits.LATA1 = 0;
+    LATAbits.LATA2 = 1;
+    LATAbits.LATA3 = 0;
+    LATEbits.LATE0 = 0;
+    LATAbits.LATA5 = 0;
+    retx = read_key_inputs();
+    if (retx == 6 || retx == 5)
+    {
+        switch (retx)
+        {
+            case 6:
+                RED_KEY_BYTE |= (1 << 2);
+                break;
+            case 5:
+                GREEN_KEY_BYTE |= (1 << 2);
+                break;
+        }
+    }
+
+    delay_ms(20);
+    LATAbits.LATA0 = 0;
+    LATAbits.LATA1 = 0;
+    LATAbits.LATA2 = 0;
+    LATAbits.LATA3 = 1;
+    LATEbits.LATE0 = 0;
+    LATAbits.LATA5 = 0;
+    retx = read_key_inputs();
+    if (retx == 6 || retx == 5)
+    {
+        switch (retx)
+        {
+            case 6:
+                RED_KEY_BYTE |= (1 << 3);
+                break;
+            case 5:
+                GREEN_KEY_BYTE |= (1 << 3);
+                break;
+        }
+    }
+
+    delay_ms(20);
+    LATAbits.LATA0 = 0;
+    LATAbits.LATA1 = 0;
+    LATAbits.LATA2 = 0;
+    LATAbits.LATA3 = 0;
+    LATEbits.LATE0 = 1;
+    LATAbits.LATA5 = 0;
+    retx = read_key_inputs();
+    if (retx == 6 || retx == 5)
+    {
+        switch (retx)
+        {
+            case 6:
+                RED_KEY_BYTE |= (1 << 4);
+                break;
+            case 5:
+                GREEN_KEY_BYTE |= (1 << 4);
+                break;
+        }
+    }
+
+    delay_ms(20);
+    LATAbits.LATA0 = 0;
+    LATAbits.LATA1 = 0;
+    LATAbits.LATA2 = 0;
+    LATAbits.LATA3 = 0;
+    LATEbits.LATE0 = 0;
+    LATAbits.LATA5 = 1;
+    retx = read_key_inputs();
+    if (retx == 6 || retx == 5)
+    {
+        switch (retx)
+        {
+            case 6:
+                RED_KEY_BYTE |= (1 << 5);
+                break;
+            case 5:
+                GREEN_KEY_BYTE |= (1 << 5);
+                break;
+        }
+    }
+
+    char xbuffer[10];
+    sprintf(xbuffer, "RC:%04X\r\n", get_key_value());
+    UART_SendString(xbuffer);
+}
+
 void main(void)
 {
     delay_ms(500);
 
     UART_Init();
 
-
     init_ports();
 
     SelectIO(0);
-    latch_data(0xFF);
+    latch_data(0x00);
+
+    reset_usr_key_value();
+    uint8_t read_pin_cmd = 0;
+    uint8_t read_spi_cmd = 0;
 
     while (1)
     {
@@ -5057,19 +5245,34 @@ void main(void)
             }
             else if (strstr((char*)uart_rx_buffer, "READ_PIN"))
             {
-                uint8_t rc_input = read_RC_inputs();
-                sprintf(buffer, "RC:%02X\r\n", rc_input);
-                UART_SendString(buffer);
+                read_pin_cmd = 1;
+            }
+            else if (strstr((char*)uart_rx_buffer, "STOP_PIN"))
+            {
+                reset_usr_key_value();
+                read_pin_cmd = 0;
+                LATAbits.LATA0 = 0;
+                LATAbits.LATA1 = 0;
+                LATAbits.LATA2 = 0;
+                LATAbits.LATA3 = 0;
+                LATEbits.LATE0 = 0;
+                LATAbits.LATA5 = 0;
             }
             else if (strstr((char*)uart_rx_buffer, "SET1_RC5"))
             {
-
-                LATCbits.LATC5 = 1;
+                LATBbits.LATB0 = 0;
+                LATCbits.LATC5 = 0;
+                char xbuffer[10];
+                sprintf(xbuffer, "RC:%02X\r\n", read_spi_inputs());
+                UART_SendString(xbuffer);
             }
             else if (strstr((char*)uart_rx_buffer, "SET0_RC5"))
             {
-
-                LATCbits.LATC5 = 0;
+                LATBbits.LATB0 = 0;
+                LATCbits.LATC5 = 1;
+                char xbuffer[10];
+                sprintf(xbuffer, "RC:%02X\r\n", read_spi_inputs());
+                UART_SendString(xbuffer);
             }
             else
             {
@@ -5082,6 +5285,15 @@ void main(void)
             }
 
             uart_rx_index = 0;
+        }
+
+        if (read_pin_cmd)
+        {
+            scan_usr_key();
+        }
+        else
+        {
+            reset_usr_key_value();
         }
     }
 }

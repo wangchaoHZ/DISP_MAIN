@@ -5,6 +5,7 @@
         <group>
             <file>file:/D:/CodeSource/DISP_MAIN/DISP_MAIN.X/main.c</file>
             <file>file:/D:/CodeSource/DISP_MAIN/DISP_MAIN.X/u_cmd.h</file>
+            <file>file:/D:/CodeSource/DISP_MAIN/DISP_MAIN.X/u_uart.h</file>
             <file>file:/D:/CodeSource/DISP_MAIN/DISP_MAIN.X/u_uart.c</file>
         </group>
     </open-files>

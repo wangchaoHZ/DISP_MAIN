@@ -2,7 +2,7 @@
  * @Author: wangchao
  * @Date: 2025-05-05 14:08:43
  * @LastEditors: wangchao
- * @LastEditTime: 2025-05-17 20:38:14
+ * @LastEditTime: 2025-06-07 11:33:51
  * @FilePath: \DISP_MAIN.X\u_cmd.h
  * @Description:
  * Copyright (c) 2025 by Bingshan Guardian, All Rights Reserved.
@@ -20,6 +20,7 @@
 #define APP_TEST_SHOW_6    "SHOW_006"
 #define APP_TEST_SHOW_0    "SHOW_000"
 #define APP_TEST_READ_PORT "READ_PIN"
+#define APP_TEST_STOP_READ "STOP_PIN"
 #define APP_TEST_SET1_RC5  "SET1_RC5"
 #define APP_TEST_SET0_RC5  "SET0_RC5"
 
